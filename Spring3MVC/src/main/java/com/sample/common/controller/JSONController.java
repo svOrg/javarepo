@@ -25,6 +25,25 @@ public class JSONController {
 		User user1 = new User();
 		user1.setName("Kuppu");
 		user1.setName("Kuppu@gmail.com");
+		if(user.getName().contains(name)){
+			users.add(user);
+		}
+		if(user1.getName().contains(name)){
+			users.add(user1);
+		}
+		return users;
+	}
+	
+	@RequestMapping(method = RequestMethod.GET)
+	public @ResponseBody List<User> getAllUsersJSON() {
+		List<User> users = new ArrayList<User>();
+		User user = new User();
+		user.setName("Purushotham");
+		user.setName("Purushotham.thalari@gmail.com");
+
+		User user1 = new User();
+		user1.setName("Kuppu");
+		user1.setName("Kuppu@gmail.com");
 		users.add(user);
 		users.add(user1);
 		return users;
