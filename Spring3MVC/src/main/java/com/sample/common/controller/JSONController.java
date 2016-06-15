@@ -19,12 +19,12 @@ public class JSONController {
 	public @ResponseBody List<User> getUsersJSON(@PathVariable String name) {
 		List<User> users = new ArrayList<User>();
 		User user = new User();
-		user.setName("Purushotham");
+		user.setName("purushotham");
 		user.setName("Purushotham.thalari@gmail.com");
 
 		User user1 = new User();
-		user1.setName("Kuppu");
-		user1.setName("Kuppu@gmail.com");
+		user1.setName("kuppu");
+		user1.setName("kuppu@gmail.com");
 		if(user.getName().contains(name)){
 			users.add(user);
 		}
@@ -44,6 +44,11 @@ public class JSONController {
 		User user1 = new User();
 		user1.setName("Kuppu");
 		user1.setName("Kuppu@gmail.com");
+		
+		User user2 = new User();
+		user2.setName("Sandy");
+		user2.setName("Sandy@gmail.com");
+		users.add(user2);
 		users.add(user);
 		users.add(user1);
 		return users;
